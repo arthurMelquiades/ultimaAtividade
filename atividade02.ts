@@ -102,11 +102,11 @@ class Personagem {
 
     constructor(nome: string, tipo: string) {
         this.nome = nome;
-        this.hp = 100;
-        this.mp = 70;
-        this.forca = 60;
-        this.defesa = 40;
-        this.agilidade = 25;
+        this.hp = 150;
+        this.mp = 100;
+        this.forca = 160;
+        this.defesa = 140;
+        this.agilidade = 50;
 
         this.aplicarBuff(tipo);
     }
@@ -114,19 +114,19 @@ class Personagem {
     private aplicarBuff(tipo: string): void {
         switch (tipo) {
             case Personagem.MAGO:
-                this.mp += 30;
+                this.mp += 40;
                 break;
             case Personagem.GUERREIRO:
-                this.hp += 30;
-                this.forca += 15;
+                this.hp += 35;
+                this.forca += 17;
                 break;
             case Personagem.ASSASSINO:
-                this.agilidade += 15;
+                this.agilidade += 16;
                 break;
             case Personagem.ARQUEIRO:
                 this.agilidade += 5;
-                this.forca += 7;
-                this.hp += 5;
+                this.forca += 8;
+                this.hp += 9;
                 break;
             default:
                 console.log(`Tipo de personagem desconhecido: ${tipo}`);
